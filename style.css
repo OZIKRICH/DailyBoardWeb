@@ -1,0 +1,373 @@
+/* =========================
+   CSS YANG SUDAH ADA
+   ========================= */
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #222;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode footer {
+    background-color: #333333;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* =========================
+   STYLE UTAMA
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   JUDUL
+   ========================= */
+
+#app > h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   INPUT
+   ========================= */
+
+input,
+textarea {
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #87CEEB;
+    box-shadow: 0 0 5px rgba(135, 206, 235, 0.5);
+}
+
+#input-search {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+button {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #222;
+    border-radius: 7px;
+    padding: 9px 15px;
+    margin: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background-color: #e8f7fc;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SECTION TUGAS
+   ========================= */
+
+#section-tugas {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+#section-tugas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tugas-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 15px;
+    margin-bottom: 10px;
+
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    cursor: grab;
+
+    transition: 0.2s;
+}
+
+.tugas-item:hover {
+    transform: translateX(3px);
+    background-color: #eef8fc;
+}
+
+.tugas-item:active {
+    cursor: grabbing;
+}
+
+
+/* Tombol hapus tugas */
+
+.tugas-item button {
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.tugas-item button:hover {
+    background-color: #ffdede;
+}
+
+
+/* =========================
+   SECTION CATATAN
+   ========================= */
+
+#section-catatan {
+    margin-top: 25px;
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.catatan-item {
+    margin-top: 15px;
+    padding: 15px;
+
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.catatan-item:hover {
+    background-color: #eef8fc;
+    transform: translateY(-2px);
+}
+
+.catatan-item p {
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+
+.catatan-item small {
+    color: #777;
+}
+
+
+/* =========================
+   QUOTES
+   ========================= */
+
+#section-quotes {
+    margin-top: 10px;
+    padding: 25px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   CUACA
+   ========================= */
+
+#section-cuaca {
+    margin-top: 10px;
+    padding: 25px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+#section-cuaca input {
+    width: 60%;
+}
+
+#section-cuaca p {
+    margin: 8px 0;
+}
+
+#section-cuaca p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+#status {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   TOMBOL GANTI TEMA
+   ========================= */
+
+#toggle-tema {
+    display: block;
+    margin: 25px auto;
+    padding: 11px 20px;
+}
+
+
+/* =========================
+   DARK MODE TAMBAHAN
+   ========================= */
+
+body.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+body.dark-mode #section-tugas,
+body.dark-mode #section-catatan,
+body.dark-mode #section-quotes,
+body.dark-mode #section-cuaca {
+    background-color: #1c1c1c;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .tugas-item,
+body.dark-mode .catatan-item {
+    background-color: #252525;
+    border-color: #444;
+}
+
+body.dark-mode .tugas-item:hover,
+body.dark-mode .catatan-item:hover {
+    background-color: #303030;
+}
+
+body.dark-mode .catatan-item small {
+    color: #aaa;
+}
+
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    #app {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    #app > h2 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+
+    .tugas-item {
+        padding: 10px;
+    }
+
+    #section-cuaca input {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    #section-cuaca button {
+        width: 100%;
+    }
+
+    #section-quotes {
+        font-size: 16px;
+        padding: 18px;
+    }
+}
