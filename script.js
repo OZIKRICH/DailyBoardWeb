@@ -3,14 +3,11 @@ console.log("dailyboard siap dijalankan");
 // Mengambil main
 const app = document.getElementById("app");
 
-let nextId = 3;
+let nextId = 1;
 
 let daftarCatatan = [];
 
-let daftarTugas = [
-    {id: 1, nama: "Belajar java script", selesai: false},
-    {id: 2, nama: "Olahraga Pagi", selesai: false}
-];
+let daftarTugas = [];
 
 let pindahItem = null;
 
