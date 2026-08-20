@@ -3,9 +3,11 @@ console.log("dailyboard siap dijalankan");
 // Mengambil main
 const app = document.getElementById("app");
 
-let nextId = 1;
+let nextId = 2;
 
-let daftarCatatan = [];
+let daftarCatatan = [
+    {id: 1, nama: "Belajar Js", selesai: false}
+];
 
 let daftarTugas = [];
 
