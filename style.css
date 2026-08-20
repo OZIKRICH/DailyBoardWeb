@@ -1,6 +1,28 @@
-/* =========================
-   CSS YANG SUDAH ADA
-   ========================= */
+.hide {
+    display: none;
+}
+
+
+/*STYLE UTAMA*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
 
 body.dark-mode {
     background-color: black;
@@ -25,38 +47,8 @@ body.dark-mode footer {
     color: white;
 }
 
-.hide {
-    display: none;
-}
 
-
-/* =========================
-   STYLE UTAMA
-   ========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
-    color: #222;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#app {
-    width: 90%;
-    max-width: 900px;
-    margin: 30px auto;
-}
-
-
-/* =========================
-   JUDUL
-   ========================= */
+/*JUDUL*/
 
 #app > h2 {
     text-align: center;
@@ -65,9 +57,7 @@ body {
 }
 
 
-/* =========================
-   INPUT
-   ========================= */
+/*INPUT*/
 
 input,
 textarea {
@@ -99,9 +89,7 @@ textarea {
 }
 
 
-/* =========================
-   BUTTON
-   ========================= */
+/*BUTTON*/
 
 button {
     border: 1px solid #ccc;
@@ -125,28 +113,56 @@ button:active {
 }
 
 
-/* =========================
-   SECTION TUGAS
-   ========================= */
+/*SECTION TUGAS*/
 
 #section-tugas {
     margin-top: 25px;
     padding: 20px;
+
     background-color: white;
     border-radius: 12px;
+
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
-#section-tugas ul {
+#section-tugas > h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#kontrol-tugas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#input-area-tugas {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+}
+
+#input-area-tugas input {
+    flex: 1;
+}
+
+
+#input-search {
+    width: 250px;
+    margin: 0;
+}
+
+
+#container-tugas ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .tugas-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
     padding: 13px 15px;
     margin-bottom: 10px;
@@ -169,9 +185,6 @@ button:active {
     cursor: grabbing;
 }
 
-
-/* Tombol hapus tugas */
-
 .tugas-item button {
     margin-left: 15px;
     flex-shrink: 0;
@@ -181,10 +194,18 @@ button:active {
     background-color: #ffdede;
 }
 
+#filter-tugas {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 
-/* =========================
-   SECTION CATATAN
-   ========================= */
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid #ddd;
+}
+
+/*SECTION CATATAN*/
 
 #section-catatan {
     margin-top: 25px;
@@ -196,8 +217,47 @@ button:active {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
+#section-catatan > h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#input-area-catatan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+#input-area-catatan textarea {
+    flex: 1;
+
+    min-height: 50px;
+    height: 50px;
+
+    margin: 0;
+    resize: vertical;
+}
+
+#input-area-catatan button {
+    white-space: nowrap;
+}
+
+
+#container-catatan {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
 .catatan-item {
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
     padding: 15px;
 
     background-color: #f8f9fa;
@@ -217,16 +277,21 @@ button:active {
 .catatan-item p {
     margin: 0 0 8px 0;
     line-height: 1.5;
+
+    overflow-wrap: anywhere;
 }
 
 .catatan-item small {
     color: #777;
+    margin-top: auto;
 }
 
+.catatan-item button {
+    align-self: flex-end;
+    margin-top: 10px;
+}
 
-/* =========================
-   QUOTES
-   ========================= */
+/*QUOTES*/
 
 #section-quotes {
     margin-top: 10px;
@@ -243,10 +308,7 @@ button:active {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
-
-/* =========================
-   CUACA
-   ========================= */
+/*CUACA*/
 
 #section-cuaca {
     margin-top: 10px;
@@ -274,9 +336,7 @@ button:active {
 }
 
 
-/* =========================
-   STATUS
-   ========================= */
+/*STATUS*/
 
 #status {
     text-align: center;
@@ -285,20 +345,23 @@ button:active {
 }
 
 
-/* =========================
-   TOMBOL GANTI TEMA
-   ========================= */
+/*TOMBOL GANTI TEMA*/
+
+#area-tema {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: 10px;
+}
 
 #toggle-tema {
-    display: block;
-    margin: 25px auto;
-    padding: 11px 20px;
+    margin: 0;
+    padding: 9px 15px;
 }
 
 
-/* =========================
-   DARK MODE TAMBAHAN
-   ========================= */
+
+/*DARK MODE TAMBAHAN*/
 
 body.dark-mode {
     background-color: #111;
@@ -333,9 +396,7 @@ body.dark-mode button:hover {
 }
 
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/*RESPONSIVE
 
 @media (max-width: 600px) {
 
@@ -371,3 +432,4 @@ body.dark-mode button:hover {
         padding: 18px;
     }
 }
+*/
