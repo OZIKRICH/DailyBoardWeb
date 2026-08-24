@@ -39,6 +39,7 @@ export function semuaTugas() {
     //input search
     const inputSearch = document.createElement("input");
     inputSearch.id = "input-search";
+    inputSearch.placeholder = "Cari Tugas";
     sectionTugas.appendChild(inputSearch);
 
     function cariTugas(keyword) {
@@ -93,6 +94,7 @@ export function semuaTugas() {
         renderTugas("belum");
     });
     const inputTugas = document.createElement("input");
+    inputTugas.placeholder = "Buat Tugas";
 
     filterTugas.appendChild(tombolSemua);
     filterTugas.appendChild(tombolSelesai);
